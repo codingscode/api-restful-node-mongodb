@@ -1,5 +1,28 @@
 
 
+no terminal:
+   npm init
+   npm i express nodemon mongoose
+   
+   npm start
+   
+
+
+
+
+ver http://localhost:3000/
+
+
+no postman
+   usar método GET para o link http://localhost:3000/  clicar em SEND
+   """
+   {
+      "message": "Oi Express!"
+   }
+   """
+
+
+
 
 
 

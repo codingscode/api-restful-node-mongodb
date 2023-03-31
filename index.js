@@ -2,6 +2,7 @@
 // config inicial
 const express = require('express')
 const app = express()
+const mongoose = require('mongoose')
 
 
 
@@ -24,7 +25,27 @@ app.get('/', (req, res) => {
 
 
 // entregar uma porta
-app.listen(3000)
+const DB_USER = 'hp'
+const DB_PASSWORD = encodeURIComponent('AC1eaLzMIROybwVB')
+
+mongoose.connect('mongodb://localhost:27017/?directConnection=true')
+.then( () => {
+   console.log('Conectamos ao mongodb!')
+   
+   
+   app.listen(3000)
+} )
+.catch( (err) => console.log(err) )
+
+
+//app.listen(3000)
+
+//mongoose.connect(`mongodb+srv://${DB_USER}:${DB_PASSWORD}@cluster0.xlcvivo.mongodb.net/bancoapi?retryWrites=true&w=majority`)
+
+
+
+
+
 
 
 

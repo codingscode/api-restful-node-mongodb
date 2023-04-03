@@ -22,6 +22,47 @@ no postman
    """
 
 
+mongodb compass
+
+https://www.youtube.com/watch?v=X8isnr1O6SA
+
+sudo apt install -y mongodb
+sudo systemctl status mongodb
+sudo systemctl start mongod
+sudo systemctl status mongod
+sudo systemctl enable mongod
+sudo systemctl stop mongod
+
+
+
+com GET em {{URL}}/     clicando em SEND:
+   aparece em body em baixo:
+      {
+          "message": "Oi Express!"
+      }
+
+
+
+com POST em {{URL}}/person     clicando em SEND:
+   no body em cima digitar:
+      {
+          "name": "Ferdinand",
+          "salary": 5000,
+          "approved": false
+      }
+   no body em baixo aparece:
+      {
+          "message": "Pessoa inserida com sucesso!"
+      }
+
+
+
+
+
+
+
+
+
 
 
 

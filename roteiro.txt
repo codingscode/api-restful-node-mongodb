@@ -43,7 +43,7 @@ com GET em {{URL}}/     clicando em SEND:
 
 
 
-com POST em {{URL}}/person     clicando em SEND:  [repetir com outros valores]
+com POST em {{URL}}/person     clicando em SEND:
    no body em cima digitar:
       {
           "name": "Ferdinand",
@@ -56,8 +56,46 @@ com POST em {{URL}}/person     clicando em SEND:  [repetir com outros valores]
       }
 
 
-
-
+com GET em {{URL}}/person     clicando em SEND:
+   no body em baixo aparece:
+     [
+         {
+             "_id": "642ae7711e41cf561da6e0c7",
+             "name": "Ferdinand",
+             "salary": 5000,
+             "approved": false,
+             "__v": 0
+         },
+         {
+             "_id": "642ae7a41e41cf561da6e0c9",
+             "name": "Fabiola",
+             "salary": 3000,
+             "approved": false,
+             "__v": 0
+         },
+         {
+             "_id": "642ae7c91e41cf561da6e0cb",
+             "name": "Bianca",
+             "salary": 4500,
+             "approved": true,
+             "__v": 0
+         },
+         {
+             "_id": "642ae7e51e41cf561da6e0cd",
+             "name": "Horácio",
+             "salary": 7000,
+             "approved": true,
+             "__v": 0
+         },
+         {
+             "_id": "642aeaa33632d238ef34c98b",
+             "name": "Davi",
+             "salary": 400,
+             "approved": false,
+             "__v": 0
+         }
+     ]
+     
 
 
 

@@ -43,7 +43,7 @@ com GET em {{URL}}/     clicando em SEND:
 
 
 
-com POST em {{URL}}/person     clicando em SEND:
+com POST em {{URL}}/person     clicando em SEND:  [repetir com outros valores]
    no body em cima digitar:
       {
           "name": "Ferdinand",

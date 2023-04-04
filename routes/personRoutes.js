@@ -59,19 +59,19 @@ router.get('/:id', async (req, res) => {
          res.status(422).json({ message: 'O usuário não foi encontrado!' })
          return
       }
-
-   
+      
+      
       res.status(200).json(person)
    }
    catch (err) {
       res.status(500).json({ error: err })
    }   
-
+   
 })
 
 // Update - atualização de dados (PUT, PATCH)
 router.patch('/:id', async (req, res) => {
-
+   
    const id = req.params.id
    
    const { name, salary, approved } = req.body
@@ -80,6 +80,13 @@ router.patch('/:id', async (req, res) => {
    
    try {
       const updatedPerson = await Person.updateOne({_id: id}, person)
+      
+      console.log(updatedPerson)
+      
+      if (updatedPerson.matchedCount === 0) {
+         res.status(422).json({ message: 'O usuário não foi encontrado!' })
+         return
+      }
 
       res.status(200).json(person)
    }
@@ -87,7 +94,7 @@ router.patch('/:id', async (req, res) => {
       res.status(500).json({ error: err })
    }
    
-
+   
 })
 
 

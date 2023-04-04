@@ -836,7 +836,7 @@ com GET em {{URL}}/person/642ae7711e41cf561da6e0c6     clicando em SEND:  usar _
       }
 
 
-com PATCH em {{URL}}/person/642ae7711e41cf561da6e0c7     clicando em SEND:
+com PATCH em {{URL}}/person/642ae7711e41cf561da6e0c7     clicando em SEND:   [repetir]
    no body colocar:
       {
          "name": "Ferdinand atualizado",
@@ -849,6 +849,38 @@ com PATCH em {{URL}}/person/642ae7711e41cf561da6e0c7     clicando em SEND:
           "salary": 12000,
           "approved": false
       }
+
+o console impresso aparece:
+     {
+       acknowledged: true,
+       modifiedCount: 0,
+       upsertedId: null,
+       upsertedCount: 0,
+       matchedCount: 1
+     }
+com _id que não existe tem-se:
+  no body em baixo:
+  {
+    "message": "O usuário não foi encontrado!"
+  }
+  e no console:
+  {
+    acknowledged: true,
+    modifiedCount: 0,
+    upsertedId: null,
+    upsertedCount: 0,
+    matchedCount: 0
+  }
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -829,6 +829,11 @@ repetindo para saber o valor de req:
 """
 
 
+com GET em {{URL}}/person/642ae7711e41cf561da6e0c6     clicando em SEND:  usar _id que não existe
+   no body em baixo aparece:
+      {
+          "message": "O usuário não foi encontrado!"
+      }
 
 
 

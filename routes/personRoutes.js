@@ -14,6 +14,7 @@ router.post('/', async (req, res) => {
 
    if (!name) {
       res.status(422).json({ error: 'O nome é obrigatório' })
+      return
    }
    
    const person = { name, salary, approved }
@@ -47,13 +48,18 @@ router.get('/', async (req, res) => {
 })
 
 router.get('/:id', async (req, res) => {
-   console.log(req)
 
    // extrair o dado da requisição, pela url = req.params
    const id = req.params.id   
    
    try {
       const person = await Person.findOne({ _id: id })
+
+      if (!person) {
+         res.status(422).json({ message: 'O usuário não foi encontrado!' })
+         return
+      }
+
    
       res.status(200).json(person)
    }

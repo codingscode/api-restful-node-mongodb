@@ -836,6 +836,25 @@ com GET em {{URL}}/person/642ae7711e41cf561da6e0c6     clicando em SEND:  usar _
       }
 
 
+com PATCH em {{URL}}/person/642ae7711e41cf561da6e0c7     clicando em SEND:
+   no body colocar:
+      {
+         "name": "Ferdinand atualizado",
+         "salary": 12000,
+         "approved": false
+      }
+   no body em baixo aparece:
+      {
+          "name": "Ferdinand atualizado",
+          "salary": 12000,
+          "approved": false
+      }
+
+
+
+
+
+
 
 
 

@@ -69,9 +69,27 @@ router.get('/:id', async (req, res) => {
 
 })
 
+// Update - atualização de dados (PUT, PATCH)
+router.patch('/:id', async (req, res) => {
+
+   const id = req.params.id
+   
+   const { name, salary, approved } = req.body
+   
+   const person = { name, salary, approved }
+   
+   try {
+      const updatedPerson = await Person.updateOne({_id: id}, person)
+
+      res.status(200).json(person)
+   }
+   catch (err) {
+      res.status(500).json({ error: err })
+   }
+   
+
+})
+
 
 module.exports = router
-
-
-
 

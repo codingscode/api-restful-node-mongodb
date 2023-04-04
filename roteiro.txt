@@ -882,7 +882,8 @@ com DELETE em {{URL}}/person/642aeaa33632d238ef34c98b     clicando em SEND:
    testar novamente com _id errado para ver a outra mensagem
 
 
-
+no terminal:
+   npm i dotenv
 
 
 

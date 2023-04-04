@@ -1,12 +1,10 @@
 
 // config inicial
+require('dotenv').config()
 const express = require('express')
 
 const app = express()
 const mongoose = require('mongoose')
-
-
-
 
 
 // forma de ler JSON
@@ -33,8 +31,8 @@ app.get('/', (req, res) => {
 
 
 // entregar uma porta
-const DB_USER = 'hp'
-const DB_PASSWORD = encodeURIComponent('AC1eaLzMIROybwVB')
+const DB_USER = process.env.DB_USER
+const DB_PASSWORD = encodeURIComponent(process.env.DB_PASSWORD)
 
 mongoose.connect('mongodb://localhost:27017/exemploapi?directConnection=true')
 .then( () => {
@@ -44,13 +42,4 @@ mongoose.connect('mongodb://localhost:27017/exemploapi?directConnection=true')
    app.listen(3000)
 } )
 .catch( (err) => console.log(err) )
-
-
-
-
-
-
-
-
-
 

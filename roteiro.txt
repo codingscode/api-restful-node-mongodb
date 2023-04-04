@@ -97,7 +97,15 @@ com GET em {{URL}}/person     clicando em SEND:
      ]
      
 
-
+com GET em {{URL}}/person/642ae7711e41cf561da6e0c7     clicando em SEND:  (pegar o valor de um _id)
+   no body em baixo aparece:
+      {
+          "_id": "642ae7711e41cf561da6e0c7",
+          "name": "Ferdinand",
+          "salary": 5000,
+          "approved": false,
+          "__v": 0
+      }
 
 
 

@@ -47,6 +47,8 @@ router.get('/', async (req, res) => {
 })
 
 router.get('/:id', async (req, res) => {
+   console.log(req)
+
    // extrair o dado da requisição, pela url = req.params
    const id = req.params.id   
    

@@ -32,7 +32,9 @@ sudo systemctl start mongod
 sudo systemctl status mongod
 sudo systemctl enable mongod
 sudo systemctl stop mongod
+sudo apt-get autoremove --purge mongo*
 
+https://blog.devgenius.io/uninstalling-mongodb-on-ubuntu-going-in-circles-use-dpkg-732a93a31f0f
 
 
 com GET em {{URL}}/     clicando em SEND:
